@@ -9,7 +9,26 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
-  return [];
+  let output = [];
+  let transaction_object = {};
+  transactions.forEach((transaction) => {
+    transaction_object[transaction.category] = transaction_object[
+      transaction.category
+    ]
+      ? transaction_object[transaction.category] + transaction.price
+      : transaction.price;
+  });
+  Object.keys(transaction_object).forEach((key) => {
+    output.push({ category: key, totalSpent: transaction_object[key] });
+  });
+  return output;
 }
 
 module.exports = calculateTotalSpentByCategory;
+
+// [{'Food' : 5}, {'Pizza' :19}, {'dorito' : 3}, {'Food': 2}, {x: 2}]
+// {
+//   Food: 7
+//   Pizza: 19
+//   dorito: 3
+// }
