@@ -26,9 +26,14 @@ function calculateTotalSpentByCategory(transactions) {
 
 module.exports = calculateTotalSpentByCategory;
 
-// [{'Food' : 5}, {'Pizza' :19}, {'dorito' : 3}, {'Food': 2}, {x: 2}]
+// [{'Food' : 5}, {'Clothing' :19}, {'Electronics' : 3}, {'Food': 2}, {x: 2}]
 // {
 //   Food: 7
-//   Pizza: 19
-//   dorito: 3
+//   Clothing: 19
+//   Electronics: 3
 // }
+// [
+//   { category: 'Food', totalSpent: 30 },
+//   { category: 'Clothing', totalSpent: 40 },
+//   { category: 'Electronics', totalSpent: 30 }
+// ]
