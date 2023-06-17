@@ -7,6 +7,7 @@
 */
 
 function isPalindrome(str) {
+  // easy to do.
   return true;
 }
 
