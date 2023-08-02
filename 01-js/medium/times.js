@@ -16,3 +16,4 @@ function calculateTime(n) {
   const end = new Date().getTime();
   return (end - start) / 1000;
 }
+console.log(calculateTime(100000));
